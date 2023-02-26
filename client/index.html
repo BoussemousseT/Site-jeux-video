@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../image/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="client">
+        <header>
+            <div>
+                <img src="../image/logo.png" alt="Logo">
+            </div>
+            <nav>
+                <input type="checkbox">
+
+                <div class="burger-menu">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ul class="desktop-menu">
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="../catalogue/index.html">Catalogue</a></li>
+                    <li><a href="../client/index.html">Inscription</a></li>
+                </ul>
+            </nav>
+
+            <form>
+                <input type="search" placeholder="Recherche...">
+                <button type="submit"></button>
+            </form>
+
+        </header>
+        <main>
+            <form action="register.php" method="post">
+                <h1>CRÉEZ VOTRE COMPTE</h1>
+                <fieldset>
+                    <div class="star">
+                        <label for="nom">Nom :</label>
+                        <input type="text" id="nom" name="nom" required autofocus placeholder="Entrez votre nom">
+                    </div>
+                    <div class="star">
+                        <label for="prenom">Prénom :</label>
+                        <input type="text" id="prenom" name="prenom" required placeholder="Entrez votre prénom">
+                    </div>
+                    <div class="star">
+                        <label for="telephone">Téléphone :</label>
+                        <input type="tel" id="telephone" name="telephone" required placeholder="123-456-7890"
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                    </div>
+                    <div>
+                        <label for="nombre">Âge :</label>
+                        <input type="number" id="nombre" name="nombre" min="18">
+                    </div>
+                </fieldset>
+                <div class="star">
+                    <label for="courriel">Courriel :</label>
+                    <input type="email" id="courriel" name="courriel" required placeholder="Entrez votre courriel">
+                </div>
+                <div>
+                    <input list="jeux-video" id="jeux-video-select" placeholder="Sélectionnez un jeu vidéo">
+
+                    <datalist id="jeux-video">
+                        <option value="PlayerUnknown's Battlegrounds">
+                        <option value="Final Fantasy XIV">
+                        <option value="The Witcher 3: Wild Hunt">
+                        <option value="Grand Theft Auto V">
+                        <option value="Call of Duty: Warzone">
+                        <option value="Doom Eternal">
+                        <option value="Microsoft Flight Simulator">
+                        <option value="Euro Truck Simulator 2">
+                        <option value="Cities: Skylines">
+                        <option value="Civilization VI">
+                        <option value="StarCraft II">
+                        <option value="FIFA 22">
+                    </datalist>
+                </div>
+
+                <fieldset>
+                    <div class="radio">
+                        <input type="radio" id="radio1" name="radio" value="Homme">
+                        <label for="radio1">un homme</label>
+                        <input type="radio" id="radio2" name="radio" value="Femme">
+                        <label for="radio2">une femme</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="checkbox2" name="checkbox2" value="Checkbox 2">
+                        <label for="checkbox2">Recevoir des offres promotionnelles par e-mail</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="checkbox1" name="checkbox1" value="Checkbox 1">
+                        <label for="checkbox1">J'accepte les conditions</label>
+                    </div>
+
+                    <div>
+                        <label for="texte">Description du joueur :</label>
+                        <textarea id="texte" name="texte"></textarea>
+                    </div>
+                </fieldset>
+
+                <div>
+                    <input type="submit" value="Créer un compte">
+                </div>
+
+
+            </form>
+        </main>
+        <footer>
+
+            <details>
+                <summary>site</summary>
+                <p>Description du site</p>
+            </details>
+            <details>
+                <summary>Adresse</summary>
+                <p>Nom de l'entreprise</p>
+                <p>Adresse de l'entreprise</p>
+                <p>Ville, Code Postal</p>
+            </details>
+            <details>
+                <summary>Map</summary>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.4276056671846!2d-73.5678260491413!3d45.509323179101794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a0a4d4dd4bf%3A0x4d7f9d9ce8f1d58!2s205%20Avenue%20Viger%20O%2C%20Montr%C3%A9al%2C%20QC%20H2Z%201G2%2C%20Canada!5e0!3m2!1sen!2sus!4v1645271260315!5m2!1sen!2sus">
+                </iframe>
+            </details>
+            <details>
+                <summary>Suivez-nous</summary>
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com" target="_blank"> <img src="../image/facebook.png"
+                                alt="facebook"></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com" target="_blank"> <img src="../image/instagram.png"
+                                alt="instagram"></a>
+                    </li>
+                    <li>
+                        <a href="https://www.twitter.com" target="_blank"> <img src="../image/twitter.png"
+                                alt="twitter"></a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com" target="_blank"> <img src="../image/youtube.png"
+                                alt="youtube"></a>
+                    </li>
+                </ul>
+            </details>
+
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,1636 @@
+/**
+    Déclaration global a toute l'application
+    Cette partie est modifié SEULEMENT APRES avoir communiquer avec les autre membre de l'équipe.
+    --------------------------------------------------------------------------------------------
+**/
+
+:root {
+    --header-color: rgb(255, 255, 255);
+    --nav-color: purple;
+    --main-color: rgb(240, 240, 240);
+    --aside-color: blue;
+    --footer-color: black;
+}
+
+/** Chargement des polices **/
+@font-face {
+    font-family: 'lemonmilk';
+    src: url('../fonts/lemonmilk.eot');
+    src: url('../fonts/lemonmilk.eot') format('embedded-opentype'),
+        url('../fonts/lemonmilk.woff2') format('woff2'),
+        url('../fonts/lemonmilk.woff') format('woff'),
+        url('../fonts/lemonmilk.ttf') format('truetype'),
+        url('../fonts/lemonmilk.svg#lemonmilk') format('svg');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/MontserratRegular.eot');
+    src: url('../fonts/MontserratRegular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MontserratRegular.woff') format('woff'),
+        url('../fonts/MontserratRegular.ttf') format('truetype'),
+        url('../fonts/MontserratRegular.svg#Sri-TSCRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*animation background*/
+@keyframes animate {
+    0% {
+        transform: scale(0) translateY(0) rotate(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.3) translateY(-90px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/*carousel catalogue*/
+@keyframes slideCat {
+    0% {
+        left: 0%;
+    }
+
+    100% {
+        left: -300%;
+    }
+
+}
+
+
+@keyframes slide1 {
+    0% {
+        background-image: url("../image/carousel/destiny.png");
+        background-position: left;
+        background-repeat: no-repeat;
+    }
+
+    33% {
+        background-image: url("../image/carousel/gtaV.png");
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+
+    66% {
+        background-image: url("../image/carousel/naruto.png");
+        background-position: left;
+        background-repeat: no-repeat;
+    }
+
+    99% {
+        background-image: url("../image/carousel/battleground.png");
+        background-position: right;
+        background-repeat: no-repeat;
+
+    }
+
+}
+
+@keyframes animateDisplayNone {
+    0% {
+        opacity: 100%;
+    }
+
+    100% {
+
+        opacity: 0%;
+    }
+}
+
+
+@keyframes burger-menu {
+    0% {
+        scale: .9;
+
+    }
+
+    50% {
+        scale: 1;
+    }
+
+    100% {
+        scale: .9;
+    }
+}
+
+@keyframes desktop-to-tablet {
+    0% {
+
+        visibility: visible;
+        opacity: 0.5;
+    }
+
+    100% {
+        visibility: hidden;
+        right: 25%;
+        opacity: 0;
+    }
+
+}
+
+@keyframes merge-desktop-to-tablet {
+    0% {
+        scale: 0;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+@keyframes annimationH2Aside {
+    0% {
+        background-color: black;
+    }
+
+    100% {
+        background-color: rgba(0, 0, 0, 0.253);
+    }
+}
+
+@keyframes iframe-video-on-mobile {
+    0% {
+        width: 421px;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+
+
+@keyframes header-on-mobile {
+    0% {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+/*-------------------ANIMATION PAGE CLIENT-------------------*/
+
+@keyframes label-desktop-to-mobile {
+    0% {
+        width: 50%;
+    }
+
+    100% {
+        width: 100%;
+
+    }
+}
+
+/*Initialisation du style*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat";
+}
+
+
+/** Déclaration du box-sizing **/
+
+/** Sémantique permettant un aspect constant sur toute l'application **/
+body {
+    /* width: 100vw; */
+    height: 100vh;
+    background: radial-gradient(rgb(255, 255, 255), rgb(245, 242, 242));
+    margin: auto;
+}
+
+/*-----------------------------------------------------*/
+/*---------------------la page .home-------------------*/
+/*-----------------------------------------------------*/
+
+body>div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.box div {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: 6px solid rgba(255, 0, 85, 0.493);
+    border-radius: 10%;
+    z-index: 1;
+}
+
+.box div:first-of-type {
+    top: 12%;
+    left: 42%;
+    animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(2) {
+    top: 70%;
+    left: 50%;
+    animation: animate 7s linear infinite;
+}
+
+.box div:nth-child(3) {
+    top: 17%;
+    left: 6%;
+    animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(4) {
+    top: 20%;
+    left: 60%;
+    animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(5) {
+    top: 67%;
+    left: 10%;
+    animation: animate 6s linear infinite;
+}
+
+.box div:nth-child(6) {
+    top: 80%;
+    left: 70%;
+    animation: animate 12s linear infinite;
+}
+
+.box div:nth-child(7) {
+    top: 60%;
+    left: 80%;
+    animation: animate 15s linear infinite;
+}
+
+.box div:nth-child(8) {
+    top: 32%;
+    left: 25%;
+    animation: animate 16s linear infinite;
+}
+
+.box div:nth-child(9) {
+    top: 90%;
+    left: 25%;
+    animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(10) {
+    top: 20%;
+    left: 80%;
+    animation: animate 5s linear infinite;
+}
+
+/*-----------------------------------------------------*/
+/*------------------------HEADER-----------------------*/
+/*-----------------------------------------------------*/
+
+header {
+    order: 1;
+    display: flex;
+    justify-content: space-around;
+    /* background-color: var(--header-color); */
+    align-items: center;
+    height: 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    z-index: 3;
+}
+
+header form {
+    display: none;
+    width: 20%;
+}
+
+header input[type="search"] {
+    height: 40px;
+    width: 80%;
+    outline: none;
+    vertical-align: middle;
+    border: 2px solid #22152c;
+    border-right: unset;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-left: 10px;
+    font-family: 'lemonmilk';
+
+}
+
+header button[type="submit"] {
+    height: 40px;
+    background-image: url('../image/search-icon.png');
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20%;
+    vertical-align: middle;
+    background-color: white;
+    border: 2px solid #22152c;
+    border-left: unset;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+header button[type="submit"]:hover {
+    background-color: white;
+    cursor: pointer;
+    animation: none;
+}
+
+
+main {
+    flex-basis: calc(100vh - 333px);
+}
+
+
+/*-------------------NAV-------------------*/
+header {
+    order: 1;
+}
+
+main {
+    order: 2;
+}
+
+footer {
+    order: 3;
+}
+
+header img {
+    width: 120px;
+    /* scale: 1.2; */
+    animation: header-on-mobile;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+
+}
+
+header nav {
+    order: -1;
+    position: relative;
+
+}
+
+header nav ul {
+    padding: 0;
+    justify-content: space-around;
+    margin: 0;
+    display: flex;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+header nav li {
+    list-style: none;
+    padding: 10px;
+    margin: 3px 1px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
+
+}
+
+header nav li:hover {
+    border-radius: 5px;
+    background-color: rgba(170, 170, 170, 0.288);
+    animation-name: burger-menu;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+header nav a {
+    text-decoration: unset;
+    font-family: 'lemonmilk';
+    /* margin: 20px; */
+    color: black;
+}
+
+header .desktop-menu {
+    display: none;
+
+}
+
+
+header input[type="checkbox"] {
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+}
+
+header input[type="checkbox"]:checked~.desktop-menu {
+    text-align: center;
+    width: 150px;
+    display: block;
+    /* padding: 0; */
+    /* background-color: #add8e6; */
+    /* left: -10px; */
+    position: absolute;
+}
+
+
+
+header .burger-menu div {
+    animation: header-on-mobile;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+
+    /* display: block; */
+    margin: 7px 0;
+    height: 8px;
+    background-color: black;
+    border-radius: 50px;
+    /* border: 2px solid black; */
+    width: 50px;
+}
+
+main {
+    margin-: 100px;
+}
+
+/*-------------------ASIDE-------------------*/
+.home aside {
+    order: 3;
+    width: 100%;
+}
+
+.home aside img {
+    width: 100%;
+}
+
+.home aside li {
+    display: inline-block;
+}
+
+.home aside::-webkit-scrollbar, .home aside::-moz-scrollbar {
+    width: 5px;
+    height: 5px;
+    padding: 5px;
+}
+
+.home aside::-webkit-scrollbar-thumb, .home aside::-moz-scrollbar-thumb {
+    background: red;
+    border-radius: 50px;
+
+}
+
+/*-------------------MAIN-------------------*/
+
+.home main {
+    order: 2;
+    width: 90%;
+    height: calc(100% - 119);
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.home main div:first-of-type {
+    flex-basis: 50%;
+    display: none;
+
+}
+
+.home main div:first-of-type h1 {
+    font-family: 'lemonmilk';
+    font-size: 48px;
+    color: red;
+}
+
+.home main div:first-of-type h2 {
+    font-family: 'Arial';
+    font-size: 16px;
+    color: black;
+}
+
+
+
+
+.home #slider {
+    flex-basis: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    animation: slide1;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    z-index: 2;
+}
+
+/*-----------------------------------------------------*/
+/*------------------la page .catalogue-----------------*/
+/*-----------------------------------------------------*/
+.catalogue {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.catalogue main {
+    order: 2;
+    width: 100%;
+    margin: auto;
+    height: calc(100% - 119);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.catalogue main section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.catalogue main section h2 {
+    flex-basis: 100%;
+    display: none;
+}
+
+.catalogue main section article:nth-of-type(2) {
+
+    flex-basis: 70%;
+    height: 275px;
+    overflow: hidden;
+    display: none;
+}
+
+.catalogue main section article:last-of-type div {
+    display: inline-block;
+    height: 125px;
+    width: 300px;
+    border-radius: 3px;
+    position: relative;
+}
+
+.catalogue main section p {
+    color: white;
+    position: absolute;
+    bottom: 3px;
+    font-size: 20px;
+}
+
+.catalogue main section article:last-of-type div:first-of-type {
+    background-image: url(../image/anthem.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.catalogue main section article:last-of-type div:nth-of-type(2) {
+    background-image: url(../image/battlegrounds.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.catalogue main section article:last-of-type div:nth-of-type(3) {
+    background-image: url(../image/fridaythe13.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.catalogue main section article:last-of-type div:nth-of-type(4) {
+    background-image: url(../image/assassinCreed.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+
+.catalogue #sliderCat {
+    flex-basis: 35%;
+    height: 250px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+}
+
+.catalogue #catalogue-slider-container {
+
+    width: 600%;
+    position: relative;
+    animation-name: slideCat;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+
+.catalogue #catalogue-slider-container img {
+    display: inline block;
+    width: 500px;
+
+}
+
+.catalogue aside {
+    order: 3;
+
+}
+
+.catalogue section~h2 {
+    font-family: 'lemonmilk';
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.catalogue .grid {
+
+    width: 100%;
+    height: 400px;
+    display: inline-flex;
+    margin: 0px 20px 0px 0px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    overflow-y: scroll;
+    justify-content: center;
+}
+
+.catalogue .grid::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    background: #aaa;
+    /* or add it to the track */
+
+}
+
+.catalogue .grid::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 0);
+    border-radius: 50px;
+
+}
+
+.catalogue .grid .card {
+    margin-left: 20px;
+    margin-top: 20px;
+    padding: 5px;
+    overflow: hidden;
+    width: 40%;
+    max-width: 200px;
+    height: 200px;
+    position: relative;
+    border-radius: 5px 5px 0px 0px;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.075);
+    background-color: #fff;
+    text-decoration: none;
+    color: black;
+}
+
+.catalogue .grid .card:hover {
+    background-color: rgb(207, 32, 61);
+    color: white;
+    width: 42%;
+    max-width: 210px;
+    height: 210px;
+
+}
+
+.catalogue .grid .card div:first-of-type {
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+}
+
+.catalogue .grid .card:first-of-type div:first-of-type {
+    background-image: url(../image/anthem.jpg);
+
+}
+
+.catalogue .grid .card:nth-of-type(2) div:first-of-type {
+    background-image: url(../image/battlegrounds.png);
+
+}
+
+.catalogue .grid .card:nth-of-type(3) div:first-of-type {
+    background-image: url(../image/assassinCreed.jpg);
+
+}
+
+.catalogue .grid .card:nth-of-type(4) div:first-of-type {
+    background-image: url(../image/fridaythe13.jpg);
+
+}
+
+.catalogue .grid .card:nth-of-type(5) div:first-of-type {
+    background-image: url(../image/narutostorm4.png);
+
+}
+
+.catalogue .grid .card:nth-of-type(6) div:first-of-type {
+    background-image: url(../image/titanfall.jpg);
+
+}
+
+.catalogue .grid .card:nth-of-type(7) div:first-of-type {
+    background-image: url(../image/watchdogs.jpg);
+
+}
+
+.catalogue .grid .card:nth-of-type(8) div:first-of-type {
+    background-image: url(../image/godofwars.jpg);
+
+}
+
+.catalogue .grid .card:nth-of-type(9) div:first-of-type {
+    background-image: url(../image/anthem.jpg);
+
+}
+
+.catalogue .grid .card:nth-of-type(10) div:first-of-type {
+    background-image: url(../image/finalfantasy.jpg);
+
+}
+
+.catalogue .grid .card:nth-of-type(11) div:first-of-type {
+    background-image: url(../image/anthem.jpg);
+
+}
+
+.catalogue .grid .card:nth-of-type(12) div:first-of-type {
+    background-image: url(../image/battlegrounds.png);
+
+}
+
+.catalogue .grid .card:nth-of-type(13) div:first-of-type {
+    background-image: url(../image/assassinCreed.jpg);
+
+}
+
+.catalogue .grid .card:nth-of-type(14) div:first-of-type {
+    background-image: url(../image/fridaythe13.jpg);
+
+}
+
+.catalogue .grid .card:nth-of-type(15) div:first-of-type {
+    background-image: url(../image/narutostorm4.png);
+
+}
+
+.catalogue .grid .card:nth-of-type(16) div:first-of-type {
+    background-image: url(../image/titanfall.jpg);
+
+}
+
+.catalogue .grid .card:nth-of-type(17) div:first-of-type {
+    background-image: url(../image/watchdogs.jpg);
+
+}
+
+.catalogue .grid .card:nth-of-type(18) div:first-of-type {
+    background-image: url(../image/godofwars.jpg);
+
+}
+
+.catalogue .grid .card:nth-of-type(19) div:first-of-type {
+    background-image: url(../image/anthem.jpg);
+
+}
+
+.catalogue .grid .card:nth-of-type(20) div:first-of-type {
+    background-image: url(../image/finalfantasy.jpg);
+
+}
+
+
+
+.catalogue .card div:first-of-type {
+    height: 100px;
+    width: 100%;
+}
+
+.catalogue .grid .card div:last-of-type {
+    margin: 5px;
+}
+
+.catalogue .grid .card span {
+    padding: 2px;
+    background-color: rgb(207, 32, 61);
+    color: white;
+    border: 0px;
+    border-radius: 1px;
+}
+
+.catalogue .grid .card:hover span {
+    background-color: #fff;
+    color: black;
+}
+
+.catalogue aside {
+    display: none;
+    flex-direction: row;
+
+}
+
+.catalogue aside .actualites {
+    width: 200px;
+    height: 450px;
+    margin-left: 50px;
+}
+
+.catalogue aside .actualites>div {
+    width: 95%;
+    margin: 15px auto;
+    height: 60px;
+    background-color: white;
+    color: black;
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.384);
+    border-radius: 10px;
+    padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+}
+
+.catalogue aside .profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url(../image/anthem.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+
+.catalogue aside .exploit {
+    flex-basis: 130px;
+    margin-left: 5px;
+}
+
+.catalogue aside .exploit p {
+    flex-basis: 130px;
+    margin-left: 5px;
+    color: #6AAB95;
+    font-size: 12px;
+}
+
+.catalogue aside ul {
+    list-style: none;
+}
+
+.catalogue aside li {
+    border: 1px solid rgba(0, 0, 0, 0.384);
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: white;
+}
+
+.catalogue aside li:hover {
+    background-color: #6AAB95;
+    color: white;
+}
+
+
+
+
+/*-----------------------------------------------------*/
+/*------------------------ FOOTER----------------------*/
+/*-----------------------------------------------------*/
+footer {
+    order: 4;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    padding: 10px;
+    color: white;
+    background-color: var(--footer-color);
+
+    z-index: 1000;
+}
+
+footer details {
+    flex-basis: 50%;
+    text-align: center;
+}
+
+footer iframe {
+    width: 180px;
+    height: 110px;
+}
+
+footer summary {
+    font-family: 'lemonmilk';
+    text-align: center;
+
+}
+
+footer ul {
+    display: flex;
+    padding: 0;
+    justify-content: center;
+
+}
+
+footer li {
+    list-style: none;
+    text-align: center;
+}
+
+footer li img {
+    max-width: 40px;
+}
+
+/**
+    Déclaration spécifique a chaque page au besoin.
+    Chaque personne travaille sur une page à la fois donc il ne devrait jamais y avoir de conflit.
+
+    2 examples: home et contact
+    --------------------------------------------------------------------------------------------
+**/
+
+/** Example pour les cas spécifiques de la page home **/
+
+.home header {}
+
+.home nav {}
+
+.home aside {}
+
+.home main {}
+
+.home main .carousel {
+    /** Spécifique pour l'intégration du carousel de la page home **/
+    border: 2px solid red;
+}
+
+.home footer {}
+
+/*-----------------------------------------------------*/
+/*-------------------la page .client-------------------*/
+/*-----------------------------------------------------*/
+
+.client main {
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+.client main h1 {
+    font-family: 'lemonmilk';
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 25px;
+}
+
+.client main form {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.client main label {
+    font-weight: bold;
+    font-style: italic;
+    font-family: initial;
+}
+
+.client main .star label::after {
+    content: " *";
+    color: red;
+}
+
+.client main input[type="text"],
+.client main input[type="email"],
+.client main input[type="number"],
+.client main input[type="tel"],
+.client main input[list="jeux-video"],
+.client main textarea {
+    outline: none;
+    display: block;
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.client main input[type="email"],
+.client main input[list="jeux-video"] {
+    width: 90%;
+}
+
+.client main .radio::before {
+    content: "Je suis : ";
+    font-weight: bold;
+    font-style: italic;
+}
+
+.client main fieldset {
+    flex-wrap: wrap;
+    display: flex;
+    border: unset;
+    font-family: initial;
+}
+
+
+.client main fieldset>div {
+    width: 100%;
+    font-family: initial;
+}
+
+.client main fieldset:first-of-type>div,
+.client main fieldset:first-of-type~div,
+.client main fieldset:last-of-type>div:last-of-type {
+    animation-name: label-desktop-to-mobile;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+.client main fieldset:last-of-type {
+    gap: 15px 0;
+    flex-direction: row;
+}
+
+.client main fieldset:last-of-type+div {
+    text-align: center;
+}
+
+.client main input[type="submit"] {
+    background-color: #6AAB95;
+    color: white;
+    padding: 13px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'lemonmilk';
+    background-color: #6AAB95;
+}
+
+.client main input[type="submit"]:hover {
+    background-color: #326d59;
+}
+
+.client main input[type="submit"]:hover {
+    animation-name: burger-menu;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.client main .star input:invalid {
+    border: 1px solid red;
+}
+
+.client main .star input:valid {
+    border: 1px solid #ccc;
+}
+
+/*-----------------------------------------------------*/
+/*-------------------la page .produit-------------------*/
+/*-----------------------------------------------------*/
+
+
+.produit nav {
+    z-index: 200;
+}
+
+.produit main {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0;
+    width: 80%;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.produit section:first-of-type {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+
+
+
+.produit section:last-of-type {
+    display: none;
+}
+
+.produit section:last-of-type h1 {
+    text-align: center;
+}
+
+.produit .accordeon {
+    width: 100%;
+}
+
+.produit h1 {
+    font-family: 'lemonmilk';
+    padding: 10px 0;
+    font-size: 18px;
+}
+
+.produit iframe {
+    width: 100%;
+    max-height: 330px;
+    border: unset;
+    border-radius: 5px;
+    animation-name: iframe-video-on-mobile;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+.produit .accordeon {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+.produit .accordeon p {
+    font-weight: bold;
+    font-style: italic;
+    font-family: initial;
+}
+
+.produit main button {
+    width: 100%;
+    padding: 13px;
+    border: unset;
+    color: white;
+    margin-bottom: 1px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'lemonmilk';
+    background-color: #6AAB95;
+    font-size: 30px;
+}
+
+.produit aside {
+    width: 200px;
+    height: 60vh;
+    overflow: auto;
+    padding-right: 5px;
+}
+
+.produit aside ul {
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+}
+
+.produit aside li {
+    list-style: none;
+    position: relative;
+}
+
+.produit aside img {
+
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.produit .tablette img {
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+
+.produit .tablette img:hover {
+    border: 2px solid #aaa;
+    padding: 2px;
+
+}
+
+.produit .tablette {
+    border-radius: 5px;
+    padding-right: 5px;
+    margin-left: 5px;
+    width: calc(30% - 10px);
+    height: 315px;
+    vertical-align: top;
+    overflow: auto;
+    display: none;
+    animation-name: merge-desktop-to-tablet;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+.produit .tablette::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    background-color: #aaa;
+}
+
+.produit .tablette::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 0);
+    border-radius: 50px;
+}
+
+.produit aside div {
+    position: absolute;
+    width: 100%;
+    height: 112px;
+    top: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    box-shadow: inset 0px -50px 60px black;
+    display: none;
+    z-index: 100;
+}
+
+
+.produit aside h2 {
+    position: absolute;
+    font-family: 'lemonmilk';
+    top: calc((163px - 13.5px) / 2);
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+}
+
+
+.produit aside img:hover~div {
+    display: block;
+    z-index: 10;
+}
+
+
+.produit .accordeon input[type="checkbox"] {
+    display: none;
+}
+
+.produit label {
+    font-family: 'lemonmilk';
+    text-align: center;
+    display: block;
+    padding: 10px;
+    margin-bottom: 1px;
+    cursor: pointer;
+    background-color: #6AAB95;
+    border-radius: 5px;
+    color: white;
+    transition: ease .5s;
+}
+
+.produit label::after {
+    content: " ▼";
+}
+
+.produit label:hover, .produit button:hover {
+    background-color: #326d59;
+}
+
+.produit button:hover {
+    animation-name: burger-menu;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.produit .content {
+    padding: 10px 5px;
+    margin-bottom: 1px;
+    display: block;
+}
+
+.produit input:checked~label:after {
+    content: " ▲";
+}
+
+.produit input:checked~.content {
+    display: none;
+}
+
+.produit aside::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    background-color: #aaa;
+}
+
+.produit aside::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 0);
+    border-radius: 50px;
+
+}
+
+
+
+/**
+    Déclaration des media query pour chaque taille.
+    --------------------------------------------------------------------------------------------
+**/
+
+
+@media only screen and (min-width:768px) {
+
+    /*-----------------------------------------------------*/
+    /*------------------------HEADER-----------------------*/
+    /*-----------------------------------------------------*/
+    header form {
+        display: block;
+        font-size: 0;
+    }
+
+    header img {
+        animation: none;
+    }
+
+    header nav {
+        order: 0;
+    }
+
+    header .desktop-menu {
+        display: flex;
+        box-shadow: unset;
+    }
+
+    header .burger-menu {
+        display: none;
+    }
+
+    header input[type="checkbox"] {
+        display: none;
+    }
+
+
+    /*-----------------------------------------------------*/
+    /*-----------------------FOOTER------------------------*/
+    /*-----------------------------------------------------*/
+
+
+    footer details {
+        flex-basis: 25%;
+    }
+
+    /*-----------------------------------------------------*/
+    /*---------------------la page .home-------------------*/
+    /*-----------------------------------------------------*/
+    .home #slider {
+        flex-basis: 50%;
+    }
+
+    .home main div:first-of-type {
+        flex-basis: 50%;
+        display: unset;
+
+    }
+
+    .home aside {
+        width: 100%;
+        text-align: center;
+    }
+
+    .home aside ul {
+        width: 100%;
+        height: 300px;
+    }
+
+    .home aside img {
+        height: 200px;
+        margin-right: 5px;
+        width: unset;
+
+    }
+
+    /*--------------------------------------------------------*/
+    /*-------------------la page .catalogue-------------------*/
+    /*--------------------------------------------------------*/
+    .catalogue main section article:nth-of-type(2) {
+        display: flex;
+        flex-basis: 100%;
+        height: 300px;
+        flex-wrap: wrap;
+        gap: 5px;
+        justify-content: center;
+    }
+
+    .catalogue main section article:nth-of-type(2) div {
+        width: 45%;
+        max-width: 700px;
+        justify-content: center;
+        height: 150px;
+    }
+
+    .catalogue main section {
+        margin-left: 0;
+    }
+
+    .catalogue .grid {
+        justify-content: center;
+    }
+
+
+
+    /*-----------------------------------------------------*/
+    /*-------------------la page .client-------------------*/
+    /*-----------------------------------------------------*/
+    .client main fieldset:first-of-type>div {
+        width: 50%;
+    }
+
+    .client main input[type="email"],
+    .client main input[list="jeux-video"],
+    .client main textarea {
+        width: 95%;
+    }
+
+    .client main fieldset:first-of-type>div,
+    .client main fieldset:first-of-type~div {
+        animation: unset;
+    }
+
+    /*------------------------------------------------------*/
+    /*-------------------la page .produit-------------------*/
+    /*------------------------------------------------------*/
+    .accordeon1, .accordeon2 {
+        width: 50%;
+    }
+
+    .produit .accordeon {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .produit section:first-of-type>div:first-child {
+        font-size: 0;
+    }
+
+    .produit .tablette {
+        display: inline-block;
+    }
+
+    .produit section:first-of-type button {
+        margin-top: 5px;
+    }
+
+    .produit section:last-of-type {
+        display: block;
+        visibility: hidden;
+        position: absolute;
+        right: 125px;
+        z-index: 10;
+        animation-name: desktop-to-tablet;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+
+    }
+
+    .produit .tablette img {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 5px;
+    }
+
+    .produit iframe {
+        width: 70%;
+        animation: none;
+    }
+
+}
+
+@media only screen and (min-width:1280px) {
+    /*-----------------------------------------------------*/
+    /*---------------------la page .home-------------------*/
+    /*-----------------------------------------------------*/
+
+    .home aside {
+        width: 50%;
+        height: 100px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        margin-left: 45%;
+    }
+
+    .home aside ul {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .home aside img {
+        height: 100px;
+        margin-right: 5px;
+        width: unset;
+
+    }
+
+    /*---------------------------------------------------------*/
+    /*---------------------la page .catalogue-------------------*/
+    /*----------------------------------------------------------*/
+    .catalogue {
+        position: relative;
+    }
+
+
+    .catalogue main section {
+        margin-left: 5%;
+    }
+
+    .catalogue main section h2 {
+        display: block;
+    }
+
+    .catalogue #sliderCat {
+        display: block;
+    }
+
+    .catalogue main section article:nth-of-type(2) div {
+        height: 125px;
+        width: 300px;
+    }
+
+    .catalogue main section article:nth-of-type(2) {
+        display: inline-block;
+        flex-basis: 700px;
+        height: 275px;
+    }
+
+    .catalogue section+div {
+        border: 1px solid rgba(0, 0, 0, 0.178);
+    }
+
+    .catalogue .grid .card {
+        width: 200px;
+    }
+
+    .catalogue .grid {
+        width: 60%;
+    }
+
+    .catalogue aside {
+        display: flex;
+        position: absolute;
+        top: 450px;
+        left: 65%;
+    }
+
+    /*-----------------------------------------------------*/
+    /*---------------------la page .client-------------------*/
+    /*-----------------------------------------------------*/
+
+    .client main fieldset:last-of-type {
+        flex-direction: column;
+        height: 100px;
+    }
+
+    .client main fieldset:last-of-type>div {
+        width: 50%;
+    }
+
+    .client main textarea {
+        width: 90%;
+    }
+
+    .client main fieldset:last-of-type>div:last-of-type {
+        animation: none;
+    }
+
+    /*-----------------------------------------------------*/
+    /*---------------------la page .produit-------------------*/
+    /*-----------------------------------------------------*/
+    .produit aside {
+        display: block;
+    }
+
+    .produit section:first-of-type {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .produit section:last-of-type {
+        animation: unset;
+        position: unset;
+        visibility: visible;
+    }
+
+    .produit iframe {
+        width: 560px;
+        max-height: 315px;
+    }
+
+    .produit .accordeon {
+        flex-direction: column;
+        margin-top: 43px;
+    }
+
+    .produit .accordeon1, .accordeon2 {
+        width: 100%;
+    }
+
+    .produit .tablette {
+        display: none;
+    }
+
+    /*******footer*******/
+    footer {
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+    }
+}
