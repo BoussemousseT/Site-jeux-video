@@ -23,5 +23,5 @@ Dernière mise à jour le 02/25/2023
 
 ------------------
 
-[@Taoufik Boussemousse] (PAGE PRODUIT / PAGE FORMULAIRE)
-[@Kokouvi Biova Arnold Adadjisso] (HOME PAGE / PAGE CATALOGUE)
+- [@Taoufik Boussemousse] (PAGE PRODUIT / PAGE FORMULAIRE)
+- [@Kokouvi Biova Arnold Adadjisso] (HOME PAGE / PAGE CATALOGUE)
