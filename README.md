@@ -6,7 +6,7 @@ Ce site a été réaliser dans le cadre du projet de fin du cours *HTML - CSS AV
 
 ## Veuillez cliquer sur l'image pour accéder à la vidéo du site avec une fluidité optimale sur toutes les dimensions, ainsi que des animations 
 
-[![Watch the video](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjl7rHuWM11P8U3pyNTQw-279_uCTX7QcygtzLJm-OIAlWus24_Ml2wBkbytxX83jYLzMzufLEdzfu0yAOgxZpDvai7UqZW3yf73zj26DNJHsnGehOY7YygWzDdu42xWaC_dYIBXM03P5ZCdsvaiBDX03QH9fwKLOMOnjwZfZ1f-SnQL4zh5G3bMoIa/s16000/produit.png)](https://streamable.com/e/ufovbn)
+[![Watch the video](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjl7rHuWM11P8U3pyNTQw-279_uCTX7QcygtzLJm-OIAlWus24_Ml2wBkbytxX83jYLzMzufLEdzfu0yAOgxZpDvai7UqZW3yf73zj26DNJHsnGehOY7YygWzDdu42xWaC_dYIBXM03P5ZCdsvaiBDX03QH9fwKLOMOnjwZfZ1f-SnQL4zh5G3bMoIa/s16000/produit.png)](https://youtu.be/Br59DMQoY_Q)
 
 ## A propos du site
 
